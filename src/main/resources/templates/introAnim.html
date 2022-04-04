@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intro</title>
+    <link rel="stylesheet" th:href="@{/css/introAnimStyle.css}" />
+  </head>
+  <body>
+    <div id="top-section" class="black-cross-bar"></div>
+    <div id="bottom-section" class="black-cross-bar"></div>
+
+    <div id="logo-anim-section">
+      <img
+        id="logo-anim-1"
+        class="logo-anim-all"
+        th:src="@{/image/logoAnimPhase1.svg}"
+        alt="logo"
+      />
+
+      <img
+        id="logo-anim-2"
+        class="logo-anim-all"
+        th:src="@{/image/logoAnimPhase2.svg}"
+        alt="logo"
+      />
+
+      <img
+        id="logo-anim-3"
+        class="logo-anim-all"
+        th:src="@{/image/logoAnimPhase3.svg}"
+        alt="logo"
+      />
+
+      <img
+        id="logo-anim-4"
+        class="logo-anim-all"
+        th:src="@{/image/logoAnimPhase4.svg}"
+        alt="logo"
+      />
+    </div>
+
+    <img id="main-star" th:src="@{/image/star-default.svg}" alt="" />
+
+    <div id="little-stars-container"></div>
+    <img
+      id="nidorino-img"
+      class="pokemon-img"
+      th:src="@{/image/nidorino.png}"
+      alt="nidorino"
+    />
+
+    <img
+      id="ectoplasma-img"
+      class="pokemon-img"
+      th:src="@{/image/ectoplasma.png}"
+      alt="ectoplasma"
+    />
+
+    <div id="skip-btn">
+        SKIP >
+    </div>
+
+    <div id="video-accelerator-indicator">
+      >
+    </div>
+
+    <script th:src="@{/js/introAnimScript.js}"></script>
+  </body>
+</html>

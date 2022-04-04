@@ -1,0 +1,164 @@
+/* header */
+.wrapper{
+  margin: auto;
+}
+
+header{
+  height:500px;
+ 
+ 
+}
+
+.nav-area{
+  float:right;
+  list-style: none;
+  margin-top:20px;
+
+}
+
+.nav-area li{
+  display:inline-block;
+}
+.nav-area li a{
+  color: rgb(6, 6, 6);
+  text-decoration: none;
+  padding: 5px 20px;
+  font-family:'Times New Roman',
+  Times,
+  serif;
+  font-size:16px;
+}
+
+.nav-area li a:hover{
+  background: #fff;
+  color:#333;
+
+}
+
+.logo img{
+  width: 100px;
+  float:left;
+  height: auto;
+    margin-right: 1.25em;
+    margin-bottom: 2em;
+ 
+
+}
+
+/* section */
+.animation{
+  display: flex;
+  align-items: center;
+  margin-bottom:300px;
+   flex-direction: column;
+
+}
+
+.pikatchou:hover{
+  transform: rotate(20deg);
+  animation-duration: 20s;
+  filter: drop-shadow(5px 5px 10px #d4a444a1);
+}
+
+/* footer */
+
+footer{
+ font-family:'Times New Roman', Times, serif;
+ margin:0;
+ font-size: 14px;
+ padding: 50px;
+ color: #fff;
+ background-color: rgb(110, 108, 108);
+}
+
+.footer {
+display: flex;
+justify-content: space-around;
+
+}
+
+.footer-left{
+  margin-right: 1.25em;
+  margin-bottom: 2em;
+}
+
+.footer-left img{
+  width: 50%;
+  height: 40%;
+  margin-left: 10%;
+  margin-top: 10px;
+
+}
+h2{
+  font-weight: 600;
+  font-size: 20px;
+  color: #fff;
+}
+footer ul{
+  list-style: none;
+  padding-left:0;
+  color:#fff;
+}
+.footer li{
+  line-height: 2em;
+}
+.footer a{
+  text-decoration: none;
+}
+
+.footer-right{
+ 
+  display:flex;
+  flex-direction: row;
+  justify-content:space-between;
+
+}
+
+.footer-right > *{
+  flex: 1 50%;
+  margin-right: 15em;
+}
+
+.box a{
+  color: #999;
+}
+.footer-bottom{
+  color: #999;
+  text-align: center;
+  padding-top: 50px;
+}
+.socials a{
+  background: #f9fafa;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin-right: 10px;
+  border-radius: 25px;
+  
+}
+.socials a i{
+  color:rgb(110, 108, 108);
+  padding: 10px 12px;
+  font-size: 20px;
+}
+@media screen and (min-widht:600px){
+  .footer-right > *{
+    flex:1;
+  }
+  .footer-left{
+    flex: 1 0px;
+  }
+
+
+}
+@media (max-widht:600px) {
+  .footer {
+    padding: 15px;
+  }
+
+  main {
+    font-size: 55px;
+  }
+
+
+}

@@ -12,11 +12,24 @@
 
 	<!-- header start -->
 
-
+      <header >
+      <div class="wrapper">
+        <div class="logo">
+            <img src="" th:src="@{/image/pokemonLogoBW 1.png}" alt="" />
+        </div>
+          <ul class="nav-area">
+             <li><a href="http://localhost:9000/accueil">Home</a></li>
+              <li><a href="http://localhost:9000/pokedex">Pokedex</a></li>
+              <li><a href="http://localhost:9000/addpokemonpage">Complete Pokedex</a></li>
+              <li><a href="#">Log in</a></li>
+          </ul>
+      </div>    
+    </header>
 
 	<!-- header end -->
 
 	<!-- form start -->
+	
 	<div>
 		<form action="#" th:action="@{/addpokemonpage}" th:object="${pokemon}"
 			method="post">
@@ -24,9 +37,7 @@
 				th:field="*{name}" id="name" placeholder="Name of your Pokemon">
 			<label for="healthPoints">Healths point of the Pokemon</label> <input
 				type="number" th:field="*{healthPoints}" id="healthPoints"
-				placeholder="Healths point of the Pokemon"> <label
-				for="number">Pokemon number</label> <input type="number"
-				th:field="*{number}" id="number" placeholder="Pokemon number">
+				placeholder="Healths point of the Pokemon">
 			<input type="submit" value="Add a new Pokemon">
 		</form>
 	</div>
@@ -35,12 +46,55 @@
 
 	<!-- footer start -->
 
+      <footer class="footer">
+        <div class="footer-left">
+          <img src="" th:src="@{/image/pokemonLogoBW 1.png}" alt="" />
+            <div class="socials">
+            <a href="#" ><i class="fa fa-linkedin"></i>
+            <a href="#" ><i class="fa fa-facebook"></i>
+            <a href="#" ><i class="fa fa-twitter"></i>
+            <a href="#" ><i class="fa fa-envelope"></i>
+         </div>
+    </div>
+
+      <ul class="footer-right">
+        <li>
+         <h2> A Propos</h2>
 
 	<!--liste element footer-->
 
-
+          <ul class="box">
+            <li>A propos d'Amazon</li>
+            <li>Carrieres</li>
+            <li>durabilité</li>
+            <li>amazon Science</li>
+          </ul>
+        </li>
+         
+        <li>
+          <h2>Ressources</h2>
+          
 	<!--liste element footer-->
-
+	
+          <ul class="box">
+            <li>A propos d'Amazon</li>
+            <li>Carrieres</li>
+            <li>durabilité</li>
+            <li>amazon Science</li>
+          </ul>
+       </li>
+    <li>
+          <h2>General</h2>
+          <ul class="box">
+            <li>A propos d'Amazon</li>
+            <li>Carrieres</li>
+            <li>durabilité</li>
+            <li>amazon Science</li>
+          </ul>
+        </li>
+     </ul>
+    </footer>
+    
 	<!-- footer end -->
 
 </body>

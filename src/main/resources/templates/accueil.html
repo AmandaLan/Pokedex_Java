@@ -30,12 +30,12 @@
 
     <section class="animation">
        <div class="coeur">
-         <img src="" th:src="@{/image/heart 1.png}" alt="" />
-            <div>
+         <img  id="image" src="" th:src="@{/image/heart 1.png}" alt="" />
+            </div>
 
               <div class="pikatchou">
-           <img src="" th:src="@{/image/25 1.png}" alt="" />
-            <div class="socials">
+           <img onclick="show_hide()" src="" th:src="@{/image/25 1.png}"  id="pika" alt="" />
+            </div>
     </section>
     
 
@@ -55,6 +55,7 @@
       <ul class="footer-right">
         <li>
          <h2> A Propos</h2>
+         
        <!--liste element footer-->
           <ul class="box">
             <li>A propos d'Amazon</li>
@@ -86,6 +87,7 @@
         </li>
      </ul>
     </footer>
+    <script src="" th:src="@{js/accueil.js}"></script>
   </body>
 </html>
   

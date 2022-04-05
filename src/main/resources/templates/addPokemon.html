@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" th:href="@{/css/addPokemonStyle.css}"/>
+    
+    <title>addPokemon</title>
+ </head>
+
+  <body>
+  
+    <!-- header start -->
+    
+
+    
+    <!-- header end -->
+    
+	<!-- form start -->
+	
+	<form action="#" th:action="@{/addpokemon}" th:object="${pokemon}" method="post">
+    <label for="name">Pokemon name</label>
+    <input type="text" th:field="*{name}" id="name" placeholder="Name of your Pokemon">
+    <label for="healthPoints">Healths point of the Pokemon</label>
+    <input type="number" th:field="*{healthPoints}" id="healthPoints" placeholder="Healths point of the Pokemon">
+    <label for="number">Pokemon number</label>
+    <input type="number" th:field="*{number}" id="number" placeholder="Pokemon number">
+    <input type="submit" value="Add a new Pokemon"> 
+</form>
+	
+	<!-- form end -->
+    
+	<!-- footer start -->  
+
+         
+       <!--liste element footer-->
+
+
+          <!--liste element footer-->
+           
+    <!-- footer end -->
+    
+  </body>
+  
+</html>

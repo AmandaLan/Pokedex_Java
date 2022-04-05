@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.example.demo.model.Pokemon;
 import com.example.demo.repository.PokemonRepository;
@@ -28,11 +29,6 @@ public class PokemonController {
 	@GetMapping("/pokemons")
 	public Iterable<Pokemon> getPokemons(){
 		return pokemonService.getPokemons();
-	}
-	
-	@GetMapping("/addpokemonpage")
-	public String showPokemonForm(Pokemon pokemon) {
-		return "addPokemon";
 	}
 	
     @PostMapping("/addpokemon")

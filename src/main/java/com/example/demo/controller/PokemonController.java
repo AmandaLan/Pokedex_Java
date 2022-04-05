@@ -7,6 +7,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -38,23 +39,18 @@ public class PokemonController {
 	public Iterable<Pokemon> getPokemons(){
 		return pokemonService.getPokemons();
 	}
-	
-//	@GetMapping("/pokemonbyname")
-//	@ResponseBody
-//	public Optional<Pokemon> getPokemonByName(@RequestParam("name") String name) 
-//			throws Exception{
-//				return pokemonRepository.getPokemonByName(name);
+
+//	@GetMapping("/typesetpokemons")
+//	public Iterable<PokemonTypeCustom> getPokemonType(){
+//		Iterable<PokemonEstDeType> listPokemonType = pokemonEstDeTypeService.getPokemons();
+//		List<PokemonTypeCustom> pokemouille = new ArrayList<PokemonTypeCustom>();
+//		for(PokemonEstDeType pokemonType: listPokemonType) {
+//			
+//			PokemonTypeCustom pokemon = new PokemonTypeCustom(pokemonType.getPokemon().getName(), pokemonType.getTypePokemon().getLabel());
+//			
+//			pokemouille.add(pokemon);
+//		}
+//		return pokemouille;
 //	}
-	@GetMapping("/typesetpokemons")
-	public Iterable<PokemonTypeCustom> getPokemonType(){
-		Iterable<PokemonEstDeType> listPokemonType = pokemonEstDeTypeService.getPokemons();
-		List<PokemonTypeCustom> pokemouille = new ArrayList<PokemonTypeCustom>();
-		for(PokemonEstDeType pokemonType: listPokemonType) {
-			
-			PokemonTypeCustom pokemon = new PokemonTypeCustom(pokemonType.getPokemon().getName(), pokemonType.getTypePokemon().getLabel());
-			
-			pokemouille.add(pokemon);
-		}
-		return pokemouille;
-	}
+
 	}

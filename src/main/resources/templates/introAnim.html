@@ -1,71 +1,68 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Intro</title>
-    <link rel="stylesheet" th:href="@{/css/introAnimStyle.css}" />
-  </head>
-  <body>
-    <div id="top-section" class="black-cross-bar"></div>
-    <div id="bottom-section" class="black-cross-bar"></div>
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Intro</title>
+<link rel="stylesheet" th:href="@{/css/introAnimStyle.css}" />
+</head>
+<body>
+	<div id="top-section" class="black-cross-bar"></div>
+	<div id="bottom-section" class="black-cross-bar"></div>
 
-    <div id="logo-anim-section">
-      <img
-        id="logo-anim-1"
-        class="logo-anim-all"
-        th:src="@{/image/logoAnimPhase1.svg}"
-        alt="logo"
-      />
+	<div id="logo-anim-section">
+		<img id="logo-anim-1" class="logo-anim-all"
+			th:src="@{/image/logoAnimPhase1.svg}" alt="logo" /> <img
+			id="logo-anim-2" class="logo-anim-all"
+			th:src="@{/image/logoAnimPhase2.svg}" alt="logo" /> <img
+			id="logo-anim-3" class="logo-anim-all"
+			th:src="@{/image/logoAnimPhase3.svg}" alt="logo" /> <img
+			id="logo-anim-4" class="logo-anim-all"
+			th:src="@{/image/logoAnimPhase4.svg}" alt="logo" />
+	</div>
 
-      <img
-        id="logo-anim-2"
-        class="logo-anim-all"
-        th:src="@{/image/logoAnimPhase2.svg}"
-        alt="logo"
-      />
+	<img id="main-star" th:src="@{/image/star-default.svg}" alt="" />
 
-      <img
-        id="logo-anim-3"
-        class="logo-anim-all"
-        th:src="@{/image/logoAnimPhase3.svg}"
-        alt="logo"
-      />
+	<div id="little-stars-container">
 
-      <img
-        id="logo-anim-4"
-        class="logo-anim-all"
-        th:src="@{/image/logoAnimPhase4.svg}"
-        alt="logo"
-      />
-    </div>
+		<img id="little-star-1" th:src="@{/image/star-orange.svg}"
+			style="visibility: hidden"><img /> <img id="little-star-2"
+			th:src="@{/image/star-red.svg}" style="visibility: hidden"><img />
+		<img id="little-star-3" th:src="@{/image/star-orange.svg}"
+			style="visibility: hidden"><img /> <img id="little-star-4"
+			th:src="@{/image/star-red.svg}" style="visibility: hidden"><img />
+		<img id="little-star-5" th:src="@{/image/star-default.svg}"
+			style="visibility: hidden"><img /> <img id="little-star-6"
+			th:src="@{/image/star-orange.svg}" style="visibility: hidden"><img />
+		<img id="little-star-7" th:src="@{/image/star-lightblue.svg}"
+			style="visibility: hidden"><img /> <img id="little-star-8"
+			th:src="@{/image/star-blue.svg}" style="visibility: hidden"><img />
 
-    <img id="main-star" th:src="@{/image/star-default.svg}" alt="" />
+		<img id="little-star-9" th:src="@{/image/star-orange.svg}"
+			style="visibility: hidden"><img /> <img id="little-star-10"
+			th:src="@{/image/star-red.svg}" style="visibility: hidden"><img />
+		<img id="little-star-11" th:src="@{/image/star-green.svg}"
+			style="visibility: hidden"><img /> <img id="little-star-12"
+			th:src="@{/image/star-lightblue.svg}" style="visibility: hidden"><img />
+		<img id="little-star-13" th:src="@{/image/star-default.svg}"
+			style="visibility: hidden"><img /> <img id="little-star-14"
+			th:src="@{/image/star-brown.svg}" style="visibility: hidden"><img />
+		<img id="little-star-15" th:src="@{/image/star-lightblue.svg}"
+			style="visibility: hidden"><img /> <img id="little-star-16"
+			th:src="@{/image/star-blue.svg}" style="visibility: hidden"><img />
 
-    <div id="little-stars-container"></div>
-    <img
-      id="nidorino-img"
-      class="pokemon-img"
-      th:src="@{/image/nidorino.png}"
-      alt="nidorino"
-    />
+	</div>
+	<img id="nidorino-img" class="pokemon-img"
+		th:src="@{/image/nidorino.png}" alt="nidorino" />
 
-    <img
-      id="ectoplasma-img"
-      class="pokemon-img"
-      th:src="@{/image/ectoplasma.png}"
-      alt="ectoplasma"
-    />
+	<img id="ectoplasma-img" class="pokemon-img"
+		th:src="@{/image/ectoplasma.png}" alt="ectoplasma" />
 
-    <div id="skip-btn">
-        SKIP >
-    </div>
+	<div id="skip-btn">SKIP ></div>
 
-    <div id="video-accelerator-indicator">
-      >
-    </div>
+	<div id="video-accelerator-indicator">></div>
 
-    <script th:src="@{/js/introAnimScript.js}"></script>
-  </body>
+	<script th:src="@{/js/introAnimScript.js}"></script>
+</body>
 </html>

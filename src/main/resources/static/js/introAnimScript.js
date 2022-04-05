@@ -6,7 +6,7 @@ function $(selector) {
 // FRAME CONSTANTS
 // globalframeRate setting
 let globalframeRate = 30; // ANIMATION GOOD AT 30 FPS
-const ACCELERATE_FRAME_RATE = 500;
+const ACCELERATE_FRAME_RATE = 300;
 // Main animation duration setting
 const LOGO_1_AND_MAIN_STAR_APPARITIONF_RAME = 30;
 const END_OF_MAIN_STAR_ANIMATION_FRAME =
@@ -111,12 +111,13 @@ function LittleStars(
 ) {
   this.initFrame = initFrame;
   this.isLittleStarFlashing = isLittleStarFlashing;
-  this.img = new Image();
-  this.img.src = `star-${color}.svg`;
-  th:src = `@{/image/star-${color}.svg}`;
-  this.newLittleStar = littleStarContainerDOMElem.appendChild(this.img);
+  // this.img = new Image();
+  // this.img.src = `star-${color}.svg`;
+  // this.newLittleStar = littleStarContainerDOMElem.appendChild(this.img);
+  
+  this.newLittleStar = $(`#little-star-${number}`);
+  this.newLittleStar.style.visibility = "visible";  
   this.newLittleStar.setAttribute("class", "little-stars");
-  this.newLittleStar.setAttribute("id", `little-star-${number}`);
   this.newLittleStar.style.top = `${startingY}%`;
   this.newLittleStar.style.left = `${startingX}%`;
   this.coordX = startingX;

@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+/* Reset CSS */
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 1vw;
+  height: 1vh;
+  overflow: hidden;
+}
+
+/* Top and bottom border */
+.black-cross-bar {
+  position: absolute;
+  width: 100%;
+  height: 21%;
+  background-color: black;
+  z-index: 1;
+}
+
+#top-section {
+    top:0;
+}
+
+#bottom-section {
+  bottom: 0;
+}
+
+/* Logo assets */
+.logo-anim-all {
+  position: absolute;
+  height: 30%;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#logo-anim-1 {
+  visibility: hidden;
+}
+
+#logo-anim-2 {
+  visibility: hidden;
+}
+
+#logo-anim-3 {
+  visibility: hidden;
+}
+
+#logo-anim-4 {
+  visibility: hidden;
+}
+
+/* Stars assets */
+#main-star {
+  position: absolute;
+  height: 13%;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  visibility: hidden;
+}
+
+#little-stars-container {
+  position: absolute;
+  height: 23%;
+  width: 29%;
+  top: 71%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* overflow: hidden; */
+}
+
+.little-stars {
+  position: absolute;
+  height: 14%;
+  /* cursor: pointer; */
+}
+
+/* Popping name */
+.popping-name {
+  font-family: "Press Start 2P", cursive;
+  position: absolute;
+  font-size: 40px;
+}
+
+/* Pokemon assets */
+.pokemon-img {
+  visibility: hidden;
+  position: absolute;
+}
+
+#ectoplasma-img {
+  height: 45%;
+  bottom: 17%;
+  right: 0;
+}
+
+#nidorino-img {
+  height: 35%;
+  left: 0;
+  bottom: 36%;
+}
+
+/* Skip btn */
+#skip-btn {
+  font-family: "Press Start 2P", cursive;
+  color: aliceblue;
+  position: absolute;
+  bottom: 5%;
+  left: 75%;
+  z-index: 2;
+  font-size: 50px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+/* Video accelerator indicator */
+#video-accelerator-indicator{
+  font-family: "Press Start 2P", cursive;
+  position: absolute;
+  color: black;
+  font-size: 150px;
+  top: 25%;
+  left: 3%;
+  z-index: 2;
+  visibility: hidden;
+}

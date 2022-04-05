@@ -45,7 +45,7 @@ public class PokemonController {
 //			throws Exception{
 //				return pokemonRepository.getPokemonByName(name);
 //	}
-	@GetMapping("/types")
+	@GetMapping("/typesetpokemons")
 	public Iterable<PokemonTypeCustom> getPokemonType(){
 		Iterable<PokemonEstDeType> listPokemonType = pokemonEstDeTypeService.getPokemons();
 		List<PokemonTypeCustom> pokemouille = new ArrayList<PokemonTypeCustom>();

@@ -12,4 +12,15 @@ import com.example.demo.model.Pokemon;
 
 @Repository
 public interface PokemonRepository extends CrudRepository<Pokemon, Long> {
-}
+	 @Query(value = "SELECT * FROM  pokemon WHERE pokemon.name_ = :pokemonName", nativeQuery = true)
+ Optional<Pokemon> findByName(String pokemonName) ;
+	
+
+	
+	
+
+	
+	}
+
+	
+

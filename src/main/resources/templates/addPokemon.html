@@ -38,6 +38,14 @@
 			<label for="healthPoints">Healths point of the Pokemon</label> <input
 				type="number" th:field="*{healthPoints}" id="healthPoints"
 				placeholder="Healths point of the Pokemon">
+				
+			<select th:field="*{countryId}">
+                   <option value=""> -- </option>
+                   <option th:each="type : ${types}"
+                            th:value="${type.getId()}"
+                            th:utext="${type.getLabel()}"/>
+            </select>
+				
 			<input type="submit" value="Add a new Pokemon">
 		</form>
 	</div>

@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.example.demo.model.Pokemon;
 import com.example.demo.model.TypePokemon;
 import com.example.demo.repository.PokemonRepository;
-
+import com.example.demo.repository.TypePokemonRepository;
 import com.example.demo.model.PokemonEstDeType;
 import com.example.demo.model.PokemonTypeCustom;
 import com.example.demo.service.PokemonEstDeTypeService;
@@ -31,6 +31,8 @@ public class AccueilController {
 	private PokemonRepository pokemonRepository;
 
 	private PokemonEstDeTypeService pokemonEstDeTypeService;
+
+	private TypePokemonRepository typePokemonRepository;
 	
 	@RequestMapping("/")
 	public String intro()
@@ -50,8 +52,8 @@ public class AccueilController {
 	public String showPokemonForm(Model model) {
 		Pokemon pokemon = new Pokemon();
 		model.addAttribute("pokemon",pokemon);
-        List<TypePokemon> list = TypePokemon.getLabel();
-        model.addAttribute("type", list);
+        Iterable<TypePokemon> allTypes = typePokemonRepository.findAll();
+        model.addAttribute("types", allTypes);
 		return "addPokemon";
 	}
 	

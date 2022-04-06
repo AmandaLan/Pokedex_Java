@@ -5,20 +5,20 @@
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" th:href="@{/css/accueil.css}"/>
     
-    <title>Accueil</title>
+    <title>Pokedex</title>
  </head>
 
   <body>
     <!-- header start -->
     
       <header >
-      <div class="wrapper">
+      <div>
         <div class="logo">
             <img src="" th:src="@{/image/pokemonLogoBW 1.png}" alt="" />
         </div>
           <ul class="nav-area">
              <li><a href="#">Home</a></li>
-              <li><a href="/pokedex">Pokedex</a></li>
+              <li><a href="#">Pokedex</a></li>
               <li><a href="#">Complete Pokedex</a></li>
               <li><a href="#">Log in</a></li>
           </ul>
@@ -28,27 +28,38 @@
     <!-- header end -->
     
 
-    <section class="animation">
-       <div class="coeur">
-         <img  id="image" src="" th:src="@{/image/heart 1.png}" alt="" />
-            </div>
-
-              <div class="pikatchou">
-           <img onclick="show_hide()" src="" th:src="@{/image/25 1.png}"  id="pika" alt="" />
-            </div>
-    </section>
-    
-
+	<main>
+		<div class="pokedex">
+			<div class="pokedexElem" th:each = "pokemon : ${pokemo}">
+				<div class="number">
+					<p class="numberStyle">N° 0</p>
+					<p class="numberStyle" th:text="${pokemon.getNumber()}"></p>		
+					<p class="numbertitle" th:text="${pokemon.getPokemon()}"></p>
+				</div>
+				<div class="pokemonInfos">
+					
+					<div class="pv">
+					<p th:text="${pokemon.getHealth()}"></p>
+					<p>PV</p>
+					</div>
+					<div class="type">
+						<p>Type:  </p>
+						<p th:text="${pokemon.getType()}"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
     
      
       <footer class="footer">
         <div class="footer-left">
           <img src="" th:src="@{/image/pokemonLogoBW 1.png}" alt="" />
             <div class="socials">
-	            <a href="#" ><i class="fa fa-linkedin"></i>
-	            <a href="#" ><i class="fa fa-facebook"></i>
-	            <a href="#" ><i class="fa fa-twitter"></i>
-	            <a href="#" ><i class="fa fa-envelope"></i>
+            <a href="#" ><i class="fa fa-linkedin"></i>
+            <a href="#" ><i class="fa fa-facebook"></i>
+            <a href="#" ><i class="fa fa-twitter"></i>
+            <a href="#" ><i class="fa fa-envelope"></i>
          </div>
     </div>
 
@@ -90,4 +101,3 @@
     <script src="" th:src="@{js/accueil.js}"></script>
   </body>
 </html>
-  

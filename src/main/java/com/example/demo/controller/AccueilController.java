@@ -39,14 +39,14 @@ public class AccueilController {
 	@RequestMapping("/pokedex")
 	public String getPokemonType(Model model){
 		Iterable<PokemonEstDeType> listPokemonType = pokemonEstDeTypeService.getPokemons();
-		List<PokemonTypeCustom> pokemouille = new ArrayList<PokemonTypeCustom>();
+		List<PokemonTypeCustom> pokemo = new ArrayList<PokemonTypeCustom>();
 		for(PokemonEstDeType pokemonType: listPokemonType) {
 			
-			PokemonTypeCustom pokemon = new PokemonTypeCustom(pokemonType.getPokemon().getName(), pokemonType.getTypePokemon().getLabel());
+			PokemonTypeCustom pokemon = new PokemonTypeCustom(pokemonType.getPokemon().getName(), pokemonType.getPokemon().getNumber(), pokemonType.getPokemon().getHealthPoints(), pokemonType.getTypePokemon().getLabel());
 			
-			pokemouille.add(pokemon);
+			pokemo.add(pokemon);
 		}
-		model.addAttribute("pokemouille", pokemouille);
+		model.addAttribute("pokemo", pokemo);
 		return "pokedex";
 	}
 }

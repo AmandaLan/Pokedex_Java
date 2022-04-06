@@ -43,6 +43,11 @@ header{
 
 /* form */
 
+.completePokedex{
+display: flex;
+justify-content : space-around;
+}
+
 /* footer */
 
 footer{

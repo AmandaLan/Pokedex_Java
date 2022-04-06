@@ -31,7 +31,8 @@ public class AccueilController {
 	private PokemonRepository pokemonRepository;
 
 	private PokemonEstDeTypeService pokemonEstDeTypeService;
-
+	
+	@Autowired
 	private TypePokemonRepository typePokemonRepository;
 	
 	@RequestMapping("/")

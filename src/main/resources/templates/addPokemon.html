@@ -30,8 +30,11 @@
 
 	<!-- form start -->
 	
-	<div>
-		<form action="#" th:action="@{/addpokemonpage}" th:object="${pokemon}"
+	<div class="completePokedex">
+	
+		<h1>Complete the Pokedex</h1>
+	
+		<form action="#" th:action="@{/addpokemonpage}" th:object="${pokemon}" 
 			method="post">
 			<label for="name">Pokemon name</label> <input type="text"
 				th:field="*{name}" id="name" placeholder="Name of your Pokemon">
@@ -39,7 +42,7 @@
 				type="number" th:field="*{healthPoints}" id="healthPoints"
 				placeholder="Healths point of the Pokemon">
 				
-			<select th:field="*{countryId}">
+			<select>
                    <option value=""> -- </option>
                    <option th:each="type : ${types}"
                             th:value="${type.getId()}"

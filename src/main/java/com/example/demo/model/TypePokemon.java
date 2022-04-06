@@ -2,6 +2,11 @@ package com.example.demo.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
+import org.springframework.lang.Nullable;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.List;
 
 
@@ -22,7 +27,9 @@ public class TypePokemon implements Serializable {
 	private String label;
 
 	//bi-directional many-to-one association to PokemonEstDeType
-	@OneToMany(mappedBy="typePokemon")
+	@Nullable
+	@JsonIgnore
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy="typePokemon")
 	private List<PokemonEstDeType> pokemonEstDeTypes;
 
 	public TypePokemon() {

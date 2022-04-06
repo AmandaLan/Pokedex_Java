@@ -7,7 +7,7 @@ public class PokemonTypeCustom implements Serializable  {
 	private Integer number;
 	private Integer health;
 	private String type;
-
+	private String secType;
 	
 	
 	public PokemonTypeCustom(String pokemon, Integer number, Integer health, String type) {
@@ -41,5 +41,10 @@ public class PokemonTypeCustom implements Serializable  {
 	public void setType(String type) {
 		this.type = type;
 	}
-	
+	public String getSecType() {
+		return secType;
+	}
+	public void setSecType(String secType) {
+		this.type = secType;
+	}
 }
